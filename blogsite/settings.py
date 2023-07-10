@@ -51,7 +51,11 @@ MIDDLEWARE = [
 
 SECRET_KEY = 's_b=5%2n=!(dehix7vlv*r3*si)+kjob3ev=6k%kknv%sd#hk2'
 
-STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+
+STATIC_URL = "/static/"
+
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 
 ROOT_URLCONF = 'blogsite.urls'
 
