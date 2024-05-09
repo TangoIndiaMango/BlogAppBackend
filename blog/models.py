@@ -13,7 +13,7 @@ class BlogModel(models.Model):
 	slug = models.SlugField(unique=True, editable=False, max_length=40)
 	caption = models.TextField()
 	content = models.TextField()
-	cover = models.ImageField(null=True, upload_to='blog_cover')
+	cover = models.URLField(null=True)
 	created_at = models.DateTimeField(auto_now_add=True)
 	updated_at = models.DateTimeField(auto_now=True)
 
@@ -35,7 +35,7 @@ class CommentModel(models.Model):
 
 
 class ImageModel(models.Model):
-	imagelink = models.ImageField(upload_to='blog_images')
+	imagelink = models.URLField()
 
 
 
