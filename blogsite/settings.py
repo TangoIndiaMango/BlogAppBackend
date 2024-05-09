@@ -26,8 +26,6 @@ SECRET_KEY = "django-insecure-$2t&#y1)(e93s4hml)iy%ul12#&#h@wm7&_dt2!3fb2)&&(=ny
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -131,6 +129,7 @@ STATIC_URL = "static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
+ALLOWED_HOSTS = ['*']
 
 CLOUDINARY_STORAGE = {
     "API_KEY": config("API_KEY"),
